@@ -1,0 +1,45 @@
+<%= form_tag({}) do -%>	
+	<%= hidden_field_tag 'back_url', url_for(params) %>  
+	<%= hidden_field_tag 'project_id', @project.id if @project %>
+		<table class="contacts expenses index">
+		<tbody>
+	    <% @expenses.each do |expense| %>
+			<tr class="hascontextmenu">     
+				<td class="checkbox">
+					<%= check_box_tag("ids[]", expense.id, false, :id => nil)  %>
+				</td>
+				<td class="status">
+				  <%= expense_status_tag(expense) %>
+				</td>         
+				<td class="name expense-name">
+						<h1 class="expense_number"><%= link_to  "#{format_date(expense.expense_date)}#{' - ' + expense.description unless expense.description.blank?}", {:controller => :expenses, :action => :edit, :id => expense.id} %></h1>
+						<h2>
+							<%= link_to_source(expense.contact) unless expense.contact.blank? %>    
+						</h2>
+				</td>
+			
+				<td class="info expense-info"> 
+					<div class="expense-sum"><strong><%= "#{RedmineContactsInvoices.settings[:invoices_default_currency]} " if RedmineContactsInvoices.settings[:invoices_default_currency] %><%= invoice_price(expense.price)  %></strong>  
+						                              
+					</div>
+					<div class="expense-date" >  
+						<strong><%# l(:field_expense_date) + ":" %></strong> <%= format_date(expense.expense_date) %>
+					</div>
+				</td>
+			</tr>
+	    <% end %>
+			<tr class="total">
+				<th/>
+				<th/>
+ 				<th class="title"> <%= "#{l(:label_total)} (#{@expenses_count}):" %> </th> 
+				<th class="sum expenses-sum">
+				  <span style="white-space: nowrap;">
+					<%= [RedmineContactsInvoices.settings[:invoices_default_currency], invoice_price(@expenses_sum)].join(" ") %></span>
+				</th>
+			</tr>
+		</tbody>  
+	  </table>
+
+<% end %>      
+
+

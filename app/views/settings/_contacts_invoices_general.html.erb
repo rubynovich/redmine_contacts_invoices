@@ -1,0 +1,105 @@
+<p>  
+  <label><%= l(:label_invoice_number_format) %></label>
+  <%= text_field_tag 'settings[invoices_invoice_number_format]', @settings[:invoices_invoice_number_format], :size => 60 %>
+  <br>
+	<em>%%YEARLY_ID%%, %%MONTHLY_ID%%, %%DAILY_ID%%, %%ID%%, %%YEAR%%, %%MONTH%%, %%DAY%%</em>  
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_excerpt_invoice_list) %></label>
+  <%= check_box_tag 'settings[invoices_excerpt_invoice_list]', 1, @settings[:invoices_excerpt_invoice_list] %>
+</p>
+<p>  
+  <label><%= l(:label_invoice_template) %></label>
+  <%= select_tag 'settings[invoices_template]',  options_for_select([["Classic", "classic"], ["Modern", "modern"], ["Modern left", "modern_left"], ["Modern with blank header", "modern_blank_header"]], @settings[:invoices_template]) %>
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_line_grouping) %></label>
+  <%= select_tag 'settings[invoices_line_grouping]',  options_for_select([[l(:label_invoice_line_grouping_by_activity), 0], 
+                                                                 [l(:label_invoice_line_grouping_by_issue), 1], 
+                                                                 [l(:label_invoice_line_grouping_by_user), 2], 
+                                                                 [l(:label_invoice_line_grouping_single_line), 3],
+                                                                 [l(:label_invoice_line_grouping_by_time_entry), 4],
+                                                                 [l(:label_invoice_line_grouping_all), 4]], @settings[:invoices_line_grouping].to_i) %>
+</p>
+
+
+<% if RedmineContactsInvoices.rate_plugin_installed? %>
+<p>  
+  <label><%= l(:label_invoice_use_rate_plugin) %></label>
+  <%= check_box_tag 'settings[invoices_use_rate_plugin]', 1, @settings[:invoices_use_rate_plugin] %>
+</p>
+<% end %>
+
+<p>  
+  <label><%= l(:label_invoices_cross_project_contacts) %></label>
+  <%= check_box_tag 'settings[invoices_cross_project_contacts]', 1, @settings[:invoices_cross_project_contacts] %>
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_disable_taxes) %></label>
+  <%= check_box_tag 'settings[invoices_disable_taxes]', 1, @settings[:invoices_disable_taxes] %>
+</p>
+
+<span id="tax_data">
+  <p>  
+    <label><%= l(:label_invoice_default_tax) %></label>
+    <%= text_field_tag 'settings[invoices_default_tax]', @settings[:invoices_default_tax], :size => 6, :maxlength => 5 %> %
+  </p>
+
+  <p>  
+    <label><%= l(:label_invoice_total_including_tax) %></label>
+    <%= check_box_tag 'settings[invoices_total_including_tax]', 1, @settings[:invoices_total_including_tax] %>
+  </p>
+
+  <p>  
+    <label><%= l(:label_invoice_discount_including_tax) %></label>
+    <%= check_box_tag 'settings[invoices_discount_after_tax]', 1, @settings[:invoices_discount_after_tax] %>
+  </p>
+  
+</span>
+
+<p>  
+  <label><%= l(:label_invoice_default_currency) %></label>
+  <%= select_tag 'settings[invoices_default_currency]', options_for_select(all_currencies.insert(0, ['', '']), @settings[:invoices_default_currency]) %> 
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_thousands_delimiter) %></label>
+  <%= select_tag 'settings[invoices_thousands_delimiter]',  options_for_select([["9 999", " "], 
+                                                                       ["9,999", ","],
+                                                                       ["9.999", "."]], @settings[:invoices_thousands_delimiter]) %>
+</p>
+
+
+<p>  
+  <label><%= l(:label_invoice_decimal_separator) %></label>
+  <%= select_tag 'settings[invoices_decimal_separator]',  options_for_select([["0.00", "."], 
+                                                                     ["0,00", ","]], @settings[:invoices_decimal_separator]) %>
+</p>
+
+<p>  
+  <label><%= l(:label_invoice_select_companies) %></label>
+  <%= check_box_tag 'settings[invoices_select_companies]', 1, @settings[:invoices_select_companies] %>
+</p>
+<% if contact_custom_fields.any? %>
+<p>  
+  <label><%= l(:label_invoice_contact_extra_field) %></label>
+  <%= select_tag 'settings[invoices_contact_extra_field]', options_for_select(contact_custom_fields.insert(0, ['', '']), @settings[:invoices_contact_extra_field]) %> 
+  <br/>
+  <em><%= l(:lable_invoice_contact_extra_field_tip) %></em>
+</p>
+<% end %>
+
+
+<p>  
+  <label><%= l(:label_invoice_units) %></label>
+  <%= text_area_tag 'settings[invoices_units]', @settings[:invoices_units].blank? ? '' : @settings[:invoices_units].split("\n").map{|u| u.strip}.join("\n"), :rows => 5 %>
+  <br /><em><%= l(:text_custom_field_possible_values_info) %></em>
+</p>
+
+<p>  
+  <label><%= l(:label_contact_show_in_app_menu) %></label>
+  <%= check_box_tag 'settings[invoices_show_in_app_menu]', 1, @settings[:invoices_show_in_app_menu] %>
+</p>   

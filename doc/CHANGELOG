@@ -1,0 +1,52 @@
+== Redmine Invoices plugin changelog
+
+Redmine Invoices plugin - invoicing plugin for Redmine
+Copyright (C) 2011-2013 Kirill Bezrukov
+http://www.redminecrm.com/projects/invoices
+
+== 2013-04-05 v2.1.1
+
+* Select project field
+* Bill time entries to different project
+* Contact select clean up
+* Fixed DAILY_ID bug
+* Added %%YEARLY_ID%%, %%MONTHLY_ID%% macros
+* Hungarian translation (Márk Sági-Kazár)
+* Czech translation (Martin Grůber)
+
+== 2013-02-26 v2.1.0
+
+* Assignee for expense
+* Attachments for invoices/expenses
+* Comments for invoices
+* Expenses table view
+* Sorting on excerpt list
+* Finance plugin support
+
+== 2013-02-04 v2.0.3
+
+* Redmine 2.3 support
+* Fixed bug with empty settings params
+
+== 2013-01-21 v2.0.2
+
+* Redmine 2.2.2 support
+
+== 2013-01-20 v2.0.1
+
+* Redmine 2.2 support
+* Per project invoice companies
+* All popular Currencies 
+* Merging invoices and expenses plugins
+
+== 2012-05-03 v1.1.0
+
+* Caching for invoice total amount
+* Issues paginator with page_size
+* Invoice subject property
+* Expenses statistic by dates and statuses
+* Page number and invoice number in page footer
+* [PRO] CSV invoices/expenses export
+* [PRO] Custom Field support for Expenses module
+* Bug: Wrong statistics for boundary dates for last month
+* Bug: ActionView:TemplateError

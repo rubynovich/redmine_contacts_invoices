@@ -1,0 +1,133 @@
+# encoding: utf-8
+# Czech strings go here for Rails i18n
+cs:
+  project_module_contacts_invoices: Faktury
+  
+  label_invoice_plural: Faktury
+  label_invoice: Faktura
+  label_invoice_new: NovĂˇ faktura
+  label_invoice_edit: Upravit fakturu
+  label_invoice_status: Stav
+  label_invoice_status_draft: NĂˇvrh
+  label_invoice_status_sent: OdeslĂˇno
+  label_invoice_status_paid: Zaplaceno
+  label_invoice_lines: PoloĹľky faktury
+  label_invoice_percent: Procent
+  label_invoice_amount: MnoĹľstvĂ­
+  label_invoice_address: Adresa
+  label_invoice_bill_to: OdbÄ›ratel
+  label_invoice_company_representative: ZĂˇstupce
+  label_invoice_company_name: NĂˇzev spoleÄŤnosti
+  label_invoice_company_info: Informace o spoleÄŤnosti
+  label_invoice_bill_info: BankovnĂ­ spojenĂ­
+  label_invoice_units: Jednotky pro Ĺ™Ăˇdky
+  label_invoice_total: Celkem
+  label_invoice_tax: DPH
+  label_invoice_sub_amount: Celkem
+  label_invoice_invoiced: ZaĂşÄŤtovĂˇno
+  label_invoice_add_line: PĹ™idat poloĹľku
+  label_invoice_overdue: Po splatnosti
+  label_invoice_last_number: 'PoslednĂ­ ÄŤĂ­slo faktury #%{number}'
+  label_invoice_template: Ĺ ablona
+  label_invoice_number_format: FormĂˇt ÄŤĂ­sla faktury
+  label_invoice_default_tax: ImplicitnĂ­ sazba DPH
+  label_invoice_line_grouping: SeskupovĂˇnĂ­ Ĺ™Ăˇdek
+  label_invoice_line_grouping_by_activity: Podle aktivity
+  label_invoice_line_grouping_by_issue: Podle Ăşkolu
+  label_invoice_line_grouping_by_user: Podle uĹľivatele
+  label_invoice_line_grouping_single_line: V jednĂ© Ĺ™Ăˇdce
+  
+  permission_edit_own_invoices: Upravit vlastnĂ­ faktury
+  permission_edit_invoices: Upravit faktury
+  permission_delete_invoices: Smazat faktury
+  permission_view_invoices: Zobrazit faktury
+
+  button_send_mail: Odeslat
+  button_print: Tisk
+  button_invoice: Faktura
+
+  field_invoice_number: ÄŚĂ­slo faktury
+  field_invoice_date: Datum vystavenĂ­
+  field_invoice_contact: ZĂˇkaznĂ­k
+  field_invoice_due_date: Datum splatnosti
+  field_invoice_amount: MnoĹľstvĂ­
+  field_invoice_discount: Sleva
+  field_invoice_assigned_to: PĹ™iĹ™azeno
+  field_invoice_status: Stav
+  field_invoice_currency: MÄ›na
+  field_invoice_language: Jazyk faktury 
+  
+  field_invoice_line_position: '#'
+  field_invoice_line_description: Popis
+  field_invoice_line_price: JednotkovĂˇ cena
+  field_invoice_line_quantity: MnoĹľstvĂ­
+  field_invoice_line_tax: DPH
+  field_invoice_line_tax_amount: Sazba DPH
+  field_invoice_line_total: Celkem
+  field_invoice_line_units: Jednotky
+  
+  #0.0.3
+  label_invoice_company_logo_url: Logo spoleÄŤnosti (URL)
+  
+  #1.0.1
+  label_invoice_line_grouping_all: VĹˇechno
+  label_invoice_default_currency: ImplicitnĂ­ mÄ›na
+  label_invoice_total_including_tax: Celkem vÄŤetnÄ› DPH
+  label_invoice_excerpt_invoice_list: VĂ˝pis faktur
+  label_invoice_created: Faktura vytvoĹ™ena
+  label_invoice_disable_taxes: NepouĹľĂ­vat DPH
+  label_invoice_days_late: '%{days} dnĂ­ po splatnosti'
+  label_invoice_contact_extra_field: Extra poloĹľka kontaktu pro fakturu
+  lable_invoice_contact_extra_field_tip: Zobrazeno na fakturĂˇch (napĹ™. klientovo DIÄŚ)
+  label_invoice_decimal_separator: OddÄ›lovaÄŤ desetinnĂ˝ch mĂ­st
+  label_invoice_thousands_delimiter: OddÄ›lovaÄŤ Ĺ™ĂˇdĹŻ
+  label_invoices_general: ObecnĂ©
+  label_invoices_company: SpoleÄŤnost
+  label_invoice_total_with_tax: Celkem vÄŤetnÄ› DPH
+  
+  #1.0.2
+  label_invoices_show_in_pdf: UkĂˇzat v PDF
+  label_invoice_discount_including_tax: Sleva vÄŤetnÄ› DPH
+  
+  #1.0.3
+  label_invoice_use_rate_plugin: PouĹľĂ­t rate plugin
+  label_invoice_line_grouping_by_time_entry: Podle ÄŤasovĂ©ho zĂˇznamu
+  label_generate_invoice: Vygenerovat fakturu
+
+  #1.0.4
+  field_invoice_subject: PĹ™edmÄ›t
+
+  #2.0.0
+  label_invoice_select_companies: SpoleÄŤnosti jako klienti
+
+  #2.0.1
+  label_invoices_company_profile: Profil spoleÄŤnosti
+
+# Expenses
+  project_module_contacts_expenses: VĂ˝daje
+  
+  permission_import_invoices: Importovat faktury
+  permission_import_expenses: Importovat vĂ˝daje
+  label_expense_plural: VĂ˝daje
+  label_expense: VĂ˝daj
+  label_expense_new: NovĂ˝ vĂ˝daj
+  label_expense_edit: Upravit vĂ˝daj
+  label_expense_status: Stav
+  label_expense_status_draft: NĂˇvrh
+  label_expense_status_new: NovĂ˝
+  label_expense_status_billed: Vystaveno
+  label_expense_status_paid: Zaplaceno
+  label_expense_created: VĂ˝daj vytvoĹ™en
+
+  field_expense_date: Datum vĂ˝daje
+  field_expense_contact: Klient
+  field_expense_status: Stav
+  field_expense_price: MnoĹľstvĂ­
+  
+  permission_edit_own_expenses: Upravit vlastnĂ­ vĂ˝daje
+  permission_edit_expenses: Upravit vĂ˝daje
+  permission_delete_expenses: Smazat vĂ˝daje
+  permission_view_expenses: Zobrazit vĂ˝daje
+
+  label_expense_stat_by_period: VĂ˝daje podle ÄŤasu
+  label_expense_stat_by_status: VĂ˝daje podle stavu
